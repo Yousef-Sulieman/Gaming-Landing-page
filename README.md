@@ -14,7 +14,6 @@ This project demonstrates a modern UI design with interactive elements, includin
 - **Responsive Design:** Works seamlessly on desktop, tablet, and mobile
 - **React Components:** Organized and reusable components
 - **Interactive Animations:** Smooth hover effects and transitions
-- **Mobile Menu:** Hamburger menu for screens < 1200px
 
 ## Technologies Used
 
