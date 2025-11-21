@@ -1,0 +1,44 @@
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee_content {
+  display: inline-flex;
+  align-items: center;
+  gap: 50px;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  } /* تحريك نصف المحتوى فقط */
+}
+
+.marquee_content h1 {
+  font-family: var(--Anton-font);
+  font-size: 4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--border-light);
+  transition: var(--transition);
+}
+
+.marquee_content h1:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.skull_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid var(--primary-color);
+  padding: 5px;
+}

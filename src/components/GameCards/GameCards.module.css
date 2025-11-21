@@ -1,0 +1,67 @@
+.GameSlider {
+  width: 100%;
+}
+.game_card {
+  width: 100%;
+  position: relative;
+}
+
+.game_card button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 100;
+  transition: var(--transition2);
+}
+.game_card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  transition: var(--transition2);
+}
+.game_card:hover::after {
+  opacity: 1;
+  cursor: pointer;
+}
+.game_card:hover button {
+  opacity: 1;
+  cursor: pointer;
+}
+/* ============================
+    RESPONSIVE
+============================ */
+
+/* أقل من 1400px */
+@media (max-width: 1400px) {
+  .game_card_img img {
+    height: auto;
+  }
+}
+
+/* أقل من 1200px */
+@media (max-width: 1200px) {
+  .game_card_img img {
+    height: auto;
+  }
+}
+
+/* أقل من 900px */
+@media (max-width: 900px) {
+  .game_card_img img {
+    height: auto;
+  }
+}
+
+/* أقل من 500px */
+@media (max-width: 500px) {
+  .game_card_img img {
+    height: auto;
+  }
+}

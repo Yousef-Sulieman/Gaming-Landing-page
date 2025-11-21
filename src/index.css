@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #45f882;
+  --black-color: #000;
+  --white-color: #fff;
+  --bg-color: #151d22;
+  --border-light: rgba(131, 131, 131, 0.5);
+  --extra-light-text: #999;
+  --border-prim-color: rgba(69, 248, 130, 0.5);
+  --Kaushan-font: "Kaushan Script", cursive;
+  --Anton-font: "Anton", sans-serif;
+  --transition: 0.3s;
+  --transition2: 0.6s;
+  /* --swiper-theme-color: transparent; */
+}
+
+body {
+  background-color: #05080a;
+  color: var(--white-color);
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 8%;
+}
+
+button {
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  box-shadow: 0px 30px 60px rgba(69, 248, 130, 0.5);
+  border: none;
+  position: relative;
+  transition: var(--transition);
+}
+
+button span:nth-of-type(1) {
+  position: absolute;
+  top: -7%;
+  left: 0;
+  width: 85%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+button span:nth-of-type(2) {
+  position: absolute;
+  top: 107%;
+  right: 0;
+  width: 85%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+button span:nth-of-type(3) {
+  position: absolute;
+  top: 0%;
+  left: -1.5%;
+  width: 2px;
+  height: 80%;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+button span:nth-of-type(4) {
+  position: absolute;
+  bottom: 0;
+  right: -1.5%;
+  width: 2px;
+  height: 80%;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--white-color);
+  cursor: pointer;
+  box-shadow: 0px 30px 60px rgba(255, 255, 255, 0.3);
+}
+button:hover span:nth-of-type(1),
+button:hover span:nth-of-type(2) {
+  width: 100%;
+  background-color: var(--white-color);
+}
+button:hover span:nth-of-type(3),
+button:hover span:nth-of-type(4) {
+  height: 100%;
+  background-color: var(--white-color);
+}
+button:hover i {
+  color: var(--primary-color);
+}
+.headings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.headings h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.headings h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: var(--Anton-font);
+}
+@media (max-width: 500px) {
+  .headings h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--Anton-font);
+  }
+}
+@media (max-width: 900px) {
+  .headings h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--Anton-font);
+  }
+}
+@media (max-width: 1200px) {
+  .headings h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: var(--Anton-font);
+  }
+}

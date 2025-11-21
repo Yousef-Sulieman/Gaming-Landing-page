@@ -1,0 +1,166 @@
+.mission {
+  flex-direction: column;
+  gap: 50px;
+}
+
+.mission_head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.skullImg {
+  background-color: var(--primary-color);
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 100%;
+  position: relative;
+}
+.skullImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.skullImg::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  /* box-shadow: 0px 30px 60px rgba(255, 255, 255, 0.5); */
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  animation: Anim_border 2s infinite linear;
+}
+.mission_head h2 {
+  width: 90%;
+  font-size: 6rem;
+  line-height: 6.5rem;
+  font-weight: 500;
+  font-family: var(--Anton-font);
+}
+.mission_infos {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+}
+.info_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+}
+.info_box h1 {
+  font-size: 6rem;
+  line-height: 6.5rem;
+  font-weight: 500;
+  font-family: var(--Anton-font);
+}
+.info_box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  z-index: 1;
+  transition: var(--transition2);
+}
+.info_box:hover::after {
+  width: 100%;
+}
+.info_box h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--light-color);
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+@keyframes Anim_border {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* أقل من 1200px */
+@media (max-width: 1200px) {
+  .mission_head h2 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+  .info_box h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
+
+/* أقل من 900px → الصورة فوق الـ heading، info boxes عمودية */
+@media (max-width: 900px) {
+  .mission_head {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mission_head h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .mission_infos {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .info_box h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .info_box h2 {
+    font-size: 1rem;
+  }
+}
+
+/* أقل من 500px → تصغير إضافي */
+@media (max-width: 500px) {
+  .mission_head h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .info_box h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .info_box h2 {
+    font-size: 0.9rem;
+  }
+  .skullImg {
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+  }
+  .skullImg::after {
+    width: 80px;
+    height: 80px;
+  }
+}

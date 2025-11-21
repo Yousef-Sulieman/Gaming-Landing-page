@@ -1,0 +1,229 @@
+.works {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: var(--black-color);
+  padding-top: 0;
+  padding: 5% 0%;
+}
+.works_head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.works_head h1 {
+  font-size: 17rem;
+  line-height: 17rem;
+  font-weight: 500;
+  color: transparent;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 1.8px;
+  -webkit-text-fill-color: var(--black-color);
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to top, transparent 14%, #fff);
+  margin-top: -40px;
+}
+.works_container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.works_card {
+  width: 100%;
+  position: relative;
+}
+.works_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 50px 20%;
+  z-index: 5;
+}
+/* .works_box:hover::after,
+.works_box:hover .box_img {
+  opacity: 1;
+  cursor: pointer;
+} */
+/* .works_box:hover .works_text h1 {
+  color: var(--black-color);
+} */
+.works_box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #007c29d4;
+  z-index: -1;
+  opacity: 0;
+  transition: var(--transition2);
+}
+/* .box_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition: var(--transition2);
+} */
+.works_text {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  transition: var(--transition2);
+}
+.works_text h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: var(--Anton-font);
+}
+
+.works_box h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-family: var(--Anton-font);
+  font-weight: 500;
+}
+.marquee_text {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.works_card marquee {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  opacity: 0;
+  background-image: url(../../assets/work-card-bg1-1.png);
+  padding: 53px 0;
+  background-size: cover;
+  z-index: 1;
+  transition: var(--transition2);
+}
+.works_card marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #007326bd;
+  z-index: -1;
+  /* opacity: 0; */
+  transition: var(--transition2);
+}
+
+.works_card:hover marquee {
+  opacity: 1;
+  cursor: pointer;
+}
+.works_card .marquee_text h1 {
+  font-family: var(--Anton-font);
+  font-size: 4rem;
+  line-height: 4rem;
+  color: var(--black-color);
+  font-weight: 500;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--black-color);
+  transition: var(--transition);
+}
+.works_card .marquee_text h1:hover {
+  color: var(--primary-color);
+}
+.works_card .marquee_text span {
+  color: var(--black-color);
+  font-size: 3rem;
+}
+/* ======= Responsive ======= */
+@media (max-width: 1200px) {
+  .works_box {
+    padding: 40px 10%;
+  }
+  .works_head h1 {
+    font-size: 12rem;
+    line-height: 12rem;
+    margin-top: -20px;
+  }
+  .works_text h1 {
+    font-size: 2.5rem;
+  }
+  .works_box h2 {
+    font-size: 1.8rem;
+  }
+  .works_card .marquee_text h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .works_card .marquee_text span {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .works_box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 25px 5%;
+  }
+  .works_head h1 {
+    font-size: 9rem;
+    line-height: 9rem;
+    margin-top: -20px;
+  }
+  .works_text {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .works_text h1 {
+    font-size: 2rem;
+  }
+  .works_box h2 {
+    font-size: 1.5rem;
+  }
+  .works_card .marquee_text h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .works_card .marquee_text span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .works_head h1 {
+    font-size: 7rem;
+    line-height: 8rem;
+    margin-top: -20px;
+  }
+  .works_box {
+    padding: 20px 3%;
+  }
+  .works_text h1 {
+    font-size: 2rem;
+  }
+  .works_box h2 {
+    font-size: 1.2rem;
+  }
+  .works_card .marquee_text h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .works_card .marquee_text span {
+    font-size: 1.5rem;
+  }
+}

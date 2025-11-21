@@ -1,0 +1,126 @@
+.services {
+  flex-direction: column;
+  position: relative;
+}
+
+.services_head h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.services_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* دايمًا تحت بعض */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.services_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.services_box span {
+  font-size: 1.5rem;
+  font-family: var(--Anton-font);
+  font-weight: 500;
+  color: var(--extra-light-text);
+  transition: var(--transition2);
+}
+
+.services_box h1 {
+  font-family: var(--Anton-font);
+  font-size: 7rem;
+  line-height: 7rem;
+  font-weight: 500;
+  color: var(--white-color);
+  transition: var(--transition2);
+}
+
+.services_box h1:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--primary-color);
+  cursor: pointer;
+}
+
+.services_box:hover span {
+  color: var(--white-color);
+}
+
+.services_shape {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 10%;
+  object-fit: contain;
+}
+
+.services_shape2 {
+  top: -30%;
+  left: 80%;
+  width: 15%;
+}
+
+/* ============================
+    RESPONSIVE — SCALES ONLY
+============================ */
+
+/* أقل من 1200px */
+@media (max-width: 1200px) {
+  .services_box h1 {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+  }
+}
+
+/* أقل من 992px */
+@media (max-width: 992px) {
+  .services_box h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
+
+  .services_box span {
+    font-size: 1.3rem;
+  }
+}
+
+/* أقل من 768px */
+@media (max-width: 768px) {
+  .services_box h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  .services_box span {
+    font-size: 1.2rem;
+  }
+
+  .services_content {
+    gap: 25px;
+  }
+}
+
+/* أقل من 500px */
+@media (max-width: 500px) {
+  .services_box h1 {
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+  }
+
+  .services_box span {
+    font-size: 1rem;
+  }
+
+  .services_content {
+    gap: 20px;
+  }
+}

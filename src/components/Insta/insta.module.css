@@ -1,0 +1,52 @@
+.insta_swiper {
+  width: 100%;
+}
+.insta_slide {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.insta_slide img {
+  transition: var(--transition2);
+}
+.insta_slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: var(--transition2);
+  opacity: 0;
+}
+.insta_slide:hover img {
+  transform: scale(1.1);
+}
+.insta_slide:hover::after {
+  opacity: 1;
+}
+.insta_slide i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  z-index: 5;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 30px 60xp rgba(69, 248, 130, 0.5);
+  opacity: 0;
+  transition: var(--transition);
+  transition-delay: 0.3s;
+}
+.insta_slide:hover i {
+  opacity: 1;
+}
