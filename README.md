@@ -24,7 +24,6 @@ This project demonstrates a modern UI design with interactive elements, includin
 - React Icons
 
 ## Demo
-
-[Live Demo]((https://gaming-page-iota.vercel.app/))  
+[https://gaming-page-iota.vercel.app/]
 
 
